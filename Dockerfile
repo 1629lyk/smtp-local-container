@@ -26,4 +26,6 @@ RUN su - alice -c "mkdir -p ~/Maildir/{cur,new,tmp}" && \
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+# Set entrypoint and default command
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bash"]
